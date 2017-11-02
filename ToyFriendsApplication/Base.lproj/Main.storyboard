@@ -152,17 +152,54 @@
             </objects>
             <point key="canvasLocation" x="2367" y="-322"/>
         </scene>
-        <!--View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="IbE-7j-Oxu">
             <objects>
-                <viewController id="Ksf-aV-one" sceneMemberID="viewController">
+                <viewController id="Ksf-aV-one" customClass="WebViewController" customModule="ToyFriendsApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Ls-RV-8rs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TMq-Yy-A7X">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Jim-sg-uSj"/>
+                                    <barButtonItem title="rewind" id="PV6-Hv-QmH">
+                                        <connections>
+                                            <action selector="rewind:" destination="Ksf-aV-one" id="Tzw-so-H0z"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bZQ-i4-vzk"/>
+                                    <barButtonItem systemItem="stop" id="FDE-V4-TC0">
+                                        <connections>
+                                            <action selector="stop:" destination="Ksf-aV-one" id="fqM-3N-Y6I"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="s0o-OY-Ikn"/>
+                                    <barButtonItem systemItem="refresh" id="xXT-4P-wsG">
+                                        <connections>
+                                            <action selector="reload:" destination="Ksf-aV-one" id="baK-Xe-Phy"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="DLa-3A-Q8y"/>
+                                    <barButtonItem systemItem="fastForward" id="wmY-4m-Nik">
+                                        <connections>
+                                            <action selector="fastforward:" destination="Ksf-aV-one" id="OS5-aK-TYk"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="BYO-Qu-tj1"/>
+                                    <barButtonItem title="Close" id="QhU-b8-5wY">
+                                        <connections>
+                                            <action selector="close:" destination="Ksf-aV-one" id="wAP-td-XcR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="cLf-LL-2eg"/>
+                                </items>
+                            </toolbar>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="poo-0W-UUE">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -173,6 +210,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="paR-2w-y50"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="poo-0W-UUE" id="Kv0-BR-4pT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uaa-i3-Dvt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

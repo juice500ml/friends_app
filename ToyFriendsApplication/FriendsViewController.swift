@@ -16,7 +16,11 @@ class FriendsViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.tableView.rowHeight = 90.0
-        self.getFriends()
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl?.attributedTitle = NSAttributedString(string: "Refreshing...")
+        self.refreshControl?.addTarget(self, action: #selector(FriendsViewController.refresh(_:)), for: UIControlEvents.valueChanged)
+        self.refreshControl?.beginRefreshing()
+        self.refresh(Optional<Int>.none as Any)
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,11 +41,12 @@ class FriendsViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? FriendTableViewCell  else {
             fatalError("The dequeued cell is not an instance of FriendTableViewCell.")
         }
-
-        let friend = friends[indexPath.row]
-        cell.nameLabel.text = friend.titleName + " " + friend.firstName + " " + friend.lastName
-        cell.emailLabel.text = friend.email
-        cell.photoImageView.image = friend.photo
+        if indexPath.row < self.friends.count {
+            let friend = friends[indexPath.row]
+            cell.nameLabel.text = friend.titleName + " " + friend.firstName + " " + friend.lastName
+            cell.emailLabel.text = friend.email
+            cell.photoImageView.image = friend.photo
+        }
         return cell
     }
     
@@ -78,9 +83,15 @@ class FriendsViewController: UITableViewController {
                             }
                         }
                     }
+                    self.refreshControl?.endRefreshing()
                 }
             }
         }).resume()
+    }
+    
+    @IBAction func refresh(_ sender: Any) {
+        self.friends.removeAll()
+        getFriends()
     }
 }
 
