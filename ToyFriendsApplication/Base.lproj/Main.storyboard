@@ -169,23 +169,6 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GtY-X7-ofI">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="F2O-Ed-rHV"/>
-                                    <barButtonItem title="Item" id="33r-aY-uSV"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="rgO-dq-O2H"/>
-                                    <barButtonItem systemItem="rewind" id="tu4-kr-BWE"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Swq-yk-ojY"/>
-                                    <barButtonItem systemItem="refresh" id="yHO-4J-Fcq"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kWR-l5-Xq8"/>
-                                    <barButtonItem systemItem="fastForward" id="jRs-4z-pic"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eRD-SM-GMM"/>
-                                    <barButtonItem title="Close" id="SbG-pk-aHR"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="7Ub-kM-7pa"/>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="paR-2w-y50"/>
