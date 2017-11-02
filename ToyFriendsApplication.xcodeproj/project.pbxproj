@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		D30CFDEF1FAB0E5500F61016 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CFDEE1FAB0E5500F61016 /* AppDelegate.swift */; };
-		D30CFDF11FAB0E5500F61016 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CFDF01FAB0E5500F61016 /* FirstViewController.swift */; };
+		D30CFDF11FAB0E5500F61016 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CFDF01FAB0E5500F61016 /* FriendsViewController.swift */; };
 		D30CFDF31FAB0E5500F61016 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CFDF21FAB0E5500F61016 /* SecondViewController.swift */; };
 		D30CFDF61FAB0E5500F61016 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D30CFDF41FAB0E5500F61016 /* Main.storyboard */; };
 		D30CFDF81FAB0E5500F61016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D30CFDF71FAB0E5500F61016 /* Assets.xcassets */; };
 		D30CFDFB1FAB0E5500F61016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D30CFDF91FAB0E5500F61016 /* LaunchScreen.storyboard */; };
+		D30CFE031FAB135D00F61016 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CFE021FAB135D00F61016 /* FriendTableViewCell.swift */; };
+		D30CFE051FAB159C00F61016 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CFE041FAB159C00F61016 /* Friend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D30CFDEB1FAB0E5500F61016 /* ToyFriendsApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToyFriendsApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D30CFDEE1FAB0E5500F61016 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D30CFDF01FAB0E5500F61016 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		D30CFDF01FAB0E5500F61016 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		D30CFDF21FAB0E5500F61016 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		D30CFDF51FAB0E5500F61016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D30CFDF71FAB0E5500F61016 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D30CFDFA1FAB0E5500F61016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D30CFDFC1FAB0E5500F61016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D30CFE021FAB135D00F61016 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		D30CFE041FAB159C00F61016 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				D30CFDEE1FAB0E5500F61016 /* AppDelegate.swift */,
-				D30CFDF01FAB0E5500F61016 /* FirstViewController.swift */,
+				D30CFDF01FAB0E5500F61016 /* FriendsViewController.swift */,
 				D30CFDF21FAB0E5500F61016 /* SecondViewController.swift */,
 				D30CFDF41FAB0E5500F61016 /* Main.storyboard */,
+				D30CFE041FAB159C00F61016 /* Friend.swift */,
 				D30CFDF71FAB0E5500F61016 /* Assets.xcassets */,
 				D30CFDF91FAB0E5500F61016 /* LaunchScreen.storyboard */,
 				D30CFDFC1FAB0E5500F61016 /* Info.plist */,
+				D30CFE021FAB135D00F61016 /* FriendTableViewCell.swift */,
 			);
 			path = ToyFriendsApplication;
 			sourceTree = "<group>";
@@ -141,7 +147,9 @@
 			files = (
 				D30CFDF31FAB0E5500F61016 /* SecondViewController.swift in Sources */,
 				D30CFDEF1FAB0E5500F61016 /* AppDelegate.swift in Sources */,
-				D30CFDF11FAB0E5500F61016 /* FirstViewController.swift in Sources */,
+				D30CFE051FAB159C00F61016 /* Friend.swift in Sources */,
+				D30CFDF11FAB0E5500F61016 /* FriendsViewController.swift in Sources */,
+				D30CFE031FAB135D00F61016 /* FriendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
