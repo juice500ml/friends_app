@@ -41,9 +41,18 @@ class Friend {
             || nation.isEmpty {
             return nil
         }
-        self.titleName = titleName
-        self.firstName = firstName
-        self.lastName = lastName
+        self.titleName = String(titleName.first!).uppercased() + titleName.dropFirst()
+        if titleName == "mr" {
+            self.titleName = "Mr."
+        }
+        else if titleName == "miss" || titleName == "ms" {
+            self.titleName = "Ms."
+        }
+        else if titleName == "mrs" {
+            self.titleName = "Mrs."
+        }
+        self.firstName = String(firstName.first!).uppercased() + firstName.dropFirst()
+        self.lastName = String(lastName.first!).uppercased() + lastName.dropFirst()
         self.email = email
         self.phone = phone
         self.nation = nation

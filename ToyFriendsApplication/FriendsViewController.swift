@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  FrinedsViewController.swift
 //  ToyFriendsApplication
 //
 //  Created by sgcs on 2017. 11. 2..
@@ -14,6 +14,7 @@ class FriendsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.tableView.rowHeight = 90.0
         self.getFriends()
     }
     
@@ -26,24 +27,20 @@ class FriendsViewController: UITableViewController {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {        return friends.count
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.friends.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Table view cells are reused and should be dequeued using a cell identifier.
         let cellIdentifier = "FriendTableViewCell"
-        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? FriendTableViewCell  else {
             fatalError("The dequeued cell is not an instance of FriendTableViewCell.")
         }
-        
-        // Fetches the appropriate meal for the data source layout.
+
         let friend = friends[indexPath.row]
-        
         cell.nameLabel.text = friend.titleName + " " + friend.firstName + " " + friend.lastName
         cell.emailLabel.text = friend.email
         cell.photoImageView.image = friend.photo
-        
         return cell
     }
     
@@ -66,6 +63,9 @@ class FriendsViewController: UITableViewController {
                             isBest: false
                             ){
                             self.friends.append(friend)
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
                         }
                     }
                 }
