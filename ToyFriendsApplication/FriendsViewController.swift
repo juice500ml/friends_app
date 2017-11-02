@@ -10,6 +10,7 @@ import UIKit
 
 class FriendsViewController: UITableViewController {
     var friends: [Friend] = []
+    var chosenFriend: Friend?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +43,15 @@ class FriendsViewController: UITableViewController {
         cell.emailLabel.text = friend.email
         cell.photoImageView.image = friend.photo
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        let index = tableView.indexPath(for: cell)
+        if let indexPath = index?.row {
+            let newView = segue.destination as! DetailViewController
+            newView.friend = self.friends[indexPath]
+        }
     }
     
     func getFriends() {

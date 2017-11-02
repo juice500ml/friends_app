@@ -15,6 +15,7 @@
 		D30CFDFB1FAB0E5500F61016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D30CFDF91FAB0E5500F61016 /* LaunchScreen.storyboard */; };
 		D30CFE031FAB135D00F61016 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CFE021FAB135D00F61016 /* FriendTableViewCell.swift */; };
 		D30CFE051FAB159C00F61016 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30CFE041FAB159C00F61016 /* Friend.swift */; };
+		D3D34F081FAB8D49009740FF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D34F071FAB8D49009740FF /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D30CFDFC1FAB0E5500F61016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D30CFE021FAB135D00F61016 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		D30CFE041FAB159C00F61016 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		D3D34F071FAB8D49009740FF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				D30CFDF01FAB0E5500F61016 /* FriendsViewController.swift */,
 				D30CFDF21FAB0E5500F61016 /* SecondViewController.swift */,
 				D30CFDF41FAB0E5500F61016 /* Main.storyboard */,
+				D3D34F071FAB8D49009740FF /* DetailViewController.swift */,
 				D30CFE041FAB159C00F61016 /* Friend.swift */,
 				D30CFDF71FAB0E5500F61016 /* Assets.xcassets */,
 				D30CFDF91FAB0E5500F61016 /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 				D30CFDF31FAB0E5500F61016 /* SecondViewController.swift in Sources */,
 				D30CFDEF1FAB0E5500F61016 /* AppDelegate.swift in Sources */,
 				D30CFE051FAB159C00F61016 /* Friend.swift in Sources */,
+				D3D34F081FAB8D49009740FF /* DetailViewController.swift in Sources */,
 				D30CFDF11FAB0E5500F61016 /* FriendsViewController.swift in Sources */,
 				D30CFE031FAB135D00F61016 /* FriendTableViewCell.swift in Sources */,
 			);
