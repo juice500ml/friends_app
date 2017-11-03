@@ -59,4 +59,25 @@ class Friend {
         self.isBest = isBest
     }
     
+    init(photo: UIImage,
+         titleName: String,
+         firstName: String,
+         lastName: String,
+         email: String,
+         phone: String,
+         nation: String,
+         isBest: Bool) {
+        self.photo = photo
+        self.titleName = titleName
+        self.firstName = firstName
+        self.lastName = lastName
+        self.email = email
+        self.phone = phone
+        self.nation = nation
+        self.isBest = isBest
+    }
+    
+    static func == (lhs: Friend, rhs: Friend) -> Bool {
+        return lhs.email == rhs.email
+    }
 }
