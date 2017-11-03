@@ -77,7 +77,6 @@ class FriendsViewController: UITableViewController {
                             nation: result["nat"] as! String,
                             isBest: false
                             ){
-                            print(picture["medium"] as! String)
                             self.friends.append(friend)
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()

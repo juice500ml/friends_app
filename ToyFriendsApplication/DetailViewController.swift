@@ -15,7 +15,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var nationLabel: UILabel!
     @IBOutlet weak var webButton: UIButton!
-    
+    @IBOutlet weak var bestButton: UIBarButtonItem!
+
     var friend: Friend? = nil
     
     override func viewDidLoad() {
@@ -28,7 +29,28 @@ class DetailViewController: UIViewController {
         self.emailLabel.text = self.friend?.email
         self.phoneLabel.text = self.friend?.phone
         self.nationLabel.text = self.friend?.nation
+        
+        let db = FriendsStorageController()
+        if db.find(friend: self.friend!) {
+            self.bestButton.title = "Delete"
+        }
+        else {
+            self.bestButton.title = "+"
+        }
     }
+    
+    @IBAction func changeBest(_ sender: Any) {
+        let db = FriendsStorageController()
+        if self.bestButton.title == "+" {
+            self.bestButton.title = "Delete"
+            db.add(friend: self.friend!)
+        }
+        else {
+            self.bestButton.title = "+"
+            db.remove(friend: self.friend!)
+        }
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

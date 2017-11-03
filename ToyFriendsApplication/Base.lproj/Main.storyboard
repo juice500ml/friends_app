@@ -192,10 +192,15 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="friendName" id="2Lw-1d-of2">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="xyP-V6-P0N"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="xyP-V6-P0N">
+                            <connections>
+                                <action selector="changeBest:" destination="gw9-zi-OyY" id="MhQ-qI-DBu"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="bestButton" destination="xyP-V6-P0N" id="L59-pA-u2Q"/>
                         <outlet property="emailLabel" destination="eDm-7U-Srh" id="YFu-9Q-bDf"/>
                         <outlet property="nameLabel" destination="f8X-Dq-4Kz" id="7w0-aJ-3so"/>
                         <outlet property="nationLabel" destination="Qho-2d-G6D" id="kab-77-pMD"/>
